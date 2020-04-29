@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    driver.class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jwtt?useSSL=false&autoReconnect=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password:
+
+mybatis:
+  mapper-locations: classpath:mapper/*Dao.xml
+  type-aliases-package: com.puietel.entity
