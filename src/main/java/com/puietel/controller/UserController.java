@@ -8,6 +8,8 @@ import com.puietel.model.Audience;
 import com.puietel.service.UserService;
 import com.puietel.util.JwtTokenUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,13 +23,15 @@ import java.util.UUID;
 /**
  * @Author Noway
  * @Date 2020/4/27 15:07
- * @Version 1.0
+ * @Version 1.0zzzzzzzzzzzzzzzzzzzzzzz
  * @Declare .....
  */
 @Slf4j
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
+    private static Logger log = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private Audience audience;

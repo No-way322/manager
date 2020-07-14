@@ -3,10 +3,13 @@ package com.puietel.interceptor;
 import com.puietel.annotation.JwtIgnore;
 import com.puietel.common.exception.CustomException;
 import com.puietel.common.response.ResultCode;
+import com.puietel.controller.AdminUserController;
 import com.puietel.model.Audience;
 import com.puietel.util.JwtTokenUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
@@ -21,13 +24,15 @@ import javax.servlet.http.HttpServletResponse;
  * ========================
  * token验证拦截器
  * Created with IntelliJ IDEA.
- * User：pyy
+ * User：pyyzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
  * Date：2019/7/18 9:46
  * Version: v1.0
  * ========================
  */
 @Slf4j
 public class JwtInterceptor extends HandlerInterceptorAdapter{
+
+    private static Logger log = LoggerFactory.getLogger(JwtInterceptor.class);
 
     @Autowired
     private Audience audience;

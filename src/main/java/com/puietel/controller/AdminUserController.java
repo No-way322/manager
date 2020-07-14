@@ -6,6 +6,8 @@ import com.puietel.common.response.Result;
 import com.puietel.model.Audience;
 import com.puietel.util.JwtTokenUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +20,7 @@ import java.util.UUID;
 /**
  * ========================
  * Created with IntelliJ IDEA.
- * User：pyy
+ * User：pyyzzzzzzxxxxxx
  * Date：2019/7/18 10:41
  * Version: v1.0
  * ========================
@@ -27,6 +29,8 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/admin")
 public class AdminUserController {
+
+    private static Logger log = LoggerFactory.getLogger(AdminUserController.class);
 
     @Autowired
     private Audience audience;
